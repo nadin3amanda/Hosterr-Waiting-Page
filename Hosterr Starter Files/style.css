@@ -1,0 +1,354 @@
+body {
+  background-color: hsl(40, 80%, 86%);
+  font-family: "Playfair Display", serif;
+}
+
+nav {
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+nav .logo {
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  margin-top: 20px;
+}
+
+nav .logo .logo-btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 8px 5px 5px 8px;
+  font-family: "Lato", sans-serif;
+  font-style: bold;
+  background-image: linear-gradient(to right, #eab253, #ea5772);
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+nav .logo .logo-btn:hover {
+  background-image: linear-gradient(to left, #eab253, #ea5772);
+  color: #ffffff;
+}
+
+nav ul {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 24%;
+  list-style-type: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #5a5a58;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #ea5772;
+}
+
+nav .sign-in a {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #5a5a58;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+nav .sign-in a:hover {
+  color: #ea5772;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+nav .sign-in .btn-join {
+  border: none;
+  border-radius: 40px;
+  padding: 10px 15px 15px 10px;
+  background-color: #4876ea;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+nav .sign-in .btn-join:hover {
+  background: #eab253;
+  transition: background 0.8s ease;
+}
+
+nav .hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+nav .hamburger .line {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: black;
+}
+
+/* Main / Introduction part */
+
+.intro-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+  justify-content: center;
+  padding: 100px;
+}
+
+.intro-container .intro-text {
+  overflow: hidden;
+}
+
+.intro-container .intro-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  line-height: 35px;
+  margin: 0;
+}
+
+.intro-container .intro-text p {
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  color: #5a5a58;
+  line-height: 25px;
+  margin: 1rem 0;
+}
+
+.intro-container .spam {
+  display: flex;
+  align-items: center;
+}
+
+.intro-container .spam strong {
+  color: #5a5a58;
+  margin: 2rem 1rem;
+}
+
+.intro-container .intro-img {
+  flex: 1 0 50%;
+  align-items: center;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
+}
+
+.intro-container .intro-img img {
+  width: 450px;
+  height: 450px;
+  object-fit: contain;
+  position: absolute;
+  overflow: hidden;
+}
+
+.intro-container .intro-img .model {
+  z-index: 4;
+}
+.intro-container .intro-img .purple {
+  transform: skewY(-10deg) skewX(10deg);
+  z-index: 3;
+}
+.intro-container .intro-img .pink {
+  z-index: 2;
+  transform: skewY(-20deg) skewX(20deg);
+}
+.intro-container .intro-img .blue {
+  z-index: 1;
+  transform: skewY(-30deg) skewX(30deg);
+}
+
+/* Form section */
+
+.intro-container .form-container .form-control input {
+  padding: 15px 15px 15px 15px;
+  width: 250px;
+  height: 15px;
+  border: none;
+  border-radius: 40px;
+}
+
+.intro-container .form-container .form-control input:focus {
+  outline: none;
+}
+.intro-container .form-container .form-control input::placeholder {
+  font-size: 13px;
+}
+.intro-container .form-container .form-control .btn-join {
+  border-radius: 40px;
+  padding: 10px 15px 15px 10px;
+  background-color: #4876ea;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.intro-container .form-container .form-control .btn-join:hover {
+  background-color: #ea5772;
+}
+
+.form-control {
+  position: relative;
+}
+.form-control.show::after {
+  content: "Email address is required";
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(253, 32, 32);
+  font-size: 1rem;
+}
+
+/* Footer */
+.footer-container {
+  display: flex;
+
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.footer-container .social-links ul {
+  list-style-type: none;
+  display: flex;
+  font-family: "Lato", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: #5a5a58;
+  margin-left: 30px;
+}
+
+.footer-container .social-links ul > li {
+  margin: 0 1rem;
+}
+.footer-container .social-links ul a {
+  color: #5a5a58;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-container .social-links ul a:hover {
+  color: #ea5772;
+  transition: color 0.8s ease;
+  text-decoration-style: wavy;
+  text-decoration-color: black;
+}
+
+.footer-container .questions {
+  display: flex;
+}
+.footer-container .questions .question-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 3px;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0 1rem;
+}
+.footer-container .questions .question-text h4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 0rem 1rem;
+  }
+
+  nav .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav .sign-in {
+    display: none;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    flex-flow: column-reverse;
+    gap: 400px;
+    overflow-x: hidden;
+    padding: 5rem 1rem;
+  }
+
+  .intro-container .intro-text br {
+    display: none;
+  }
+
+  .intro-container .form-container .form-control input {
+    width: 100%;
+  }
+
+  .intro-container .form-container .form-control .btn-join {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .intro-container .intro-img img {
+    width: 300px;
+    height: 300px;
+    top: 50px;
+  }
+
+  .intro-container .intro-img {
+    justify-content: center;
+    left: 20px;
+  }
+
+  .footer-container {
+    padding: 5rem 1rem;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-container .social-links ul {
+    justify-content: left;
+  }
+}
+
+/* Tablet Media Query */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .intro-container .form-container .form-control {
+    display: flex;
+  }
+  .intro-container .form-container .form-control input {
+    width: 400px;
+  }
+  .intro-container .form-container .form-control .btn-join {
+    margin: 0 1rem;
+    width: auto;
+  }
+}
